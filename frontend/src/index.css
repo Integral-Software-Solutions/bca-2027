@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Syne:wght@500;700&display=swap');
+
+:root {
+    /* Color Palette */
+    --bg-deep: #0A0F1E;
+    --bg-base: #0D1B2A;
+    --bg-card: #152236;
+    --bg-hover: #1E3A5F;
+    --color-primary: #00CFFF;
+    --color-danger: #FF4040;
+    --color-warning: #FFAA00;
+    --color-safe: #00D97E;
+
+    /* Text */
+    --text-primary: #FFFFFF;
+    --text-secondary: rgba(255, 255, 255, 0.6);
+    --border-subtle: rgba(255, 255, 255, 0.07);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+    /* Subtle grid overlay */
+    background-image: linear-gradient(var(--border-subtle) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border-subtle) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+h1,
+h2,
+h3,
+.display-font {
+    font-family: 'Syne', sans-serif;
+}
+
+.mono-font {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Base Card Style */
+.institutional-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+/* Button Reset */
+button {
+    cursor: pointer;
+    border: none;
+    font-family: 'DM Sans', sans-serif;
+    transition: transform 0.1s ease, background-color 0.2s ease;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* Animated focus states for Auth inputs */
+.auth-input::placeholder {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.input-group:focus-within>div {
+    border-bottom-color: var(--color-primary) !important;
+    box-shadow: 0 1px 0 0 var(--color-primary);
+}
+
+.input-group:focus-within svg {
+    color: var(--color-primary) !important;
+}
+
+/* Default Dark Mode (Your current aesthetic) */
+:root {
+    --bg-main: #0b1426;
+    /* The main page background */
+    --bg-card: #152236;
+    /* The table/card background */
+    --text-primary: #f8fafc;
+    /* White text */
+    --text-secondary: #94a3b8;
+    /* Gray text */
+    --border-subtle: rgba(255, 255, 255, 0.1);
+    --bg-hover: rgba(255, 255, 255, 0.05);
+
+    /* Status Colors (Keep these vibrant in dark mode) */
+    --color-primary: #00cfff;
+    --color-success: #00d97e;
+    --color-warning: #ffaa00;
+    --color-danger: #ff4040;
+}
+
+/* Light Mode Overrides */
+[data-theme='light'] {
+    --bg-main: #f1f5f9;
+    /* Light gray background */
+    --bg-card: #ffffff;
+    /* Pure white cards */
+    --text-primary: #0f172a;
+    /* Dark slate text */
+    --text-secondary: #64748b;
+    /* Medium gray text */
+    --border-subtle: #cbd5e1;
+    /* Darker borders for visibility */
+    --bg-hover: #e2e8f0;
+    /* Light hover effect */
+
+    /* Make status colors slightly darker so they are readable on white */
+    --color-primary: #0284c7;
+    --color-success: #16a34a;
+    --color-warning: #d97706;
+    --color-danger: #dc2626;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}

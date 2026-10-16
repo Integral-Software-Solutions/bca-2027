@@ -1,0 +1,16 @@
+{
+  "name": "Online Crime Reporting Web",
+  "short_name": "Crime Reporting",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0b1426",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "768x768",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
